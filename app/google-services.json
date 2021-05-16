@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "342991923821",
+    "firebase_url": "https://admin-app-ebbb9-default-rtdb.firebaseio.com",
+    "project_id": "admin-app-ebbb9",
+    "storage_bucket": "admin-app-ebbb9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342991923821:android:c778b8a511caff845aad64",
+        "android_client_info": {
+          "package_name": "com.example.adminapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342991923821-37q0dtu8rrnantmd252muelvel40kn0q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKNrbe4zy1pXyKNAo_poAVEHMR6xCOMHI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342991923821-37q0dtu8rrnantmd252muelvel40kn0q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:342991923821:android:d5680bf79e8b37035aad64",
+        "android_client_info": {
+          "package_name": "com.example.wedeliver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "342991923821-37q0dtu8rrnantmd252muelvel40kn0q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKNrbe4zy1pXyKNAo_poAVEHMR6xCOMHI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "342991923821-37q0dtu8rrnantmd252muelvel40kn0q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

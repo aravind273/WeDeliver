@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cnb_unselectedColor="@color/white">
+    <item android:id="@+id/mycart"
+        android:title="cart"
+        android:icon="@drawable/cart"
+        app:cnb_backgroundColor="#fff"
+        app:cnb_iconColor="@color/color_black"
+        app:cnb_textColor="@color/color_black"
+        ></item>
+    <item android:id="@+id/myorders"
+        android:title="Orders"
+        android:icon="@drawable/history_black"
+        app:cnb_backgroundColor="#fff"
+        app:cnb_iconColor="@color/color_black"
+        app:cnb_textColor="@color/color_black"
+        ></item>
+    <item android:id="@+id/myaccount"
+        android:title="Account"
+        android:icon="@drawable/account_black"
+        app:cnb_backgroundColor="#fff"
+        app:cnb_iconColor="@color/color_black"
+        app:cnb_textColor="@color/color_black"
+        ></item>
+
+
+
+
+</menu>
