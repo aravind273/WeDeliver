@@ -9,6 +9,7 @@
         android:roundIcon="@drawable/app_logo1"
         android:supportsRtl="true"
         android:theme="@style/Theme.WeDeliver.App">
+        <activity android:name=".orderSuccess"></activity>
         <activity android:name=".splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,16 +20,14 @@
         <activity android:name=".user_account_details" />
         <activity android:name=".order" />
         <activity android:name=".cart" />
-        <activity android:name=".login">
-        </activity>
+        <activity android:name=".login"></activity>
         <activity android:name=".registration" />
         <activity android:name=".MainActivity" />
     </application>
-    <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
 </manifest>

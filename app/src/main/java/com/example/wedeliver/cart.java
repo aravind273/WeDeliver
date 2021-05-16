@@ -21,7 +21,10 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
 
 public class cart extends AppCompatActivity {
     public static ArrayList<cartItemDetails> arrayList;
@@ -34,6 +37,7 @@ public class cart extends AppCompatActivity {
     LinearLayout products;
     TextView startShopping;
     Button placeOrder;
+    DatabaseReference databaseReference_order;
 
 
     @Override
@@ -137,8 +141,46 @@ public class cart extends AppCompatActivity {
         placeOrder.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(),order.class);
-                startActivity(intent);
+//                Intent intent=new Intent(getApplicationContext(),order.class);
+//                startActivity(intent);
+                String useremail=firebaseAuth.getCurrentUser().getEmail();
+                String newemail=useremail.replace(".","");
+                if(arrayList!=null && arrayList.size()>0)
+                {
+                    String date= new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date()) ;
+                    String time=new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
+
+                    databaseReference_order=FirebaseDatabase.getInstance().getReference().child("order").child(newemail).child(date+time);
+                    databaseReference_order.child("date").setValue(date);
+                    databaseReference_order.child("time").setValue(time);
+                    for(int i=0;i<arrayList.size();i++)
+                    {
+                        cartItemDetails cartItemDetails=arrayList.get(i);
+                        String name=cartItemDetails.getName();
+                        String brand=cartItemDetails.getBrand();
+                        String quantity=cartItemDetails.getQuantity();
+                        String selling_price=cartItemDetails.getSelling_price();
+                        String actual_price=cartItemDetails.getActual_price();
+                        String count=cartItemDetails.getCount();
+                        String image=cartItemDetails.getImage();
+                        String discount=cartItemDetails.getDicount();
+                        databaseReference_order.child(name).child("name").setValue(name);
+                        databaseReference_order.child(name).child("brand").setValue(brand);
+                        databaseReference_order.child(name).child("selling_price").setValue(selling_price);
+                        databaseReference_order.child(name).child("actual_price").setValue(actual_price);
+                        databaseReference_order.child(name).child("count").setValue(count);
+                        databaseReference_order.child(name).child("discount").setValue(discount);
+                        databaseReference_order.child(name).child("quantity").setValue(quantity);
+                    }
+                    databaseReference=FirebaseDatabase.getInstance().getReference().child("cart");
+                    databaseReference.removeValue();
+                    arrayList.clear();
+
+                }
+                Intent intent=new Intent(getApplicationContext(),orderSuccess.class);
+            startActivity(intent);
+
+
             }
         });
 

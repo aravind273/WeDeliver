@@ -5,16 +5,17 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".user_account_details"
+    android:background="@color/color_gray_light"
 
     android:orientation="vertical">
-    <ImageView
+    <com.mikhaellopez.circularimageview.CircularImageView
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_marginTop="30dp"
         android:layout_gravity="center_horizontal"
         android:id="@+id/user_imageview"
         android:src="@drawable/item_default_image"
-        ></ImageView>
+        ></com.mikhaellopez.circularimageview.CircularImageView>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
