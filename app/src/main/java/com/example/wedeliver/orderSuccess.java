@@ -18,7 +18,7 @@ public class orderSuccess extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_success);
         LinearLayout linearLayout=findViewById(R.id.linearLayout1);
-        Snackbar.make(linearLayout,"Order Placed", Snackbar.LENGTH_SHORT).show();
+        Snackbar.make(linearLayout,"Order Placed", Snackbar.LENGTH_SHORT).show();//snackbar added
        DatabaseReference databaseReference= FirebaseDatabase.getInstance().getReference().child("cart");
        if(databaseReference!=null) {
            databaseReference.removeValue();
