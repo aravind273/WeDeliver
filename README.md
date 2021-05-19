@@ -1,0 +1,2 @@
+# WeDeliver
+It is an Android mobile application developed in Android Studio built with the help of  Java Programming language and used Firebase authentication,Firebase Real-time Database and Firebase Storage  to authenticate user,to provide real-time data updates and data access and to storage files in Firebase Storage. The goal of the application is used to book services online including Laundry service,Rental services and can be used to buy grocery products online.
