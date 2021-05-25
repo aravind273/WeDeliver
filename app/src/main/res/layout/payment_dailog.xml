@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#00baf2"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Pay Using..."
+        android:textColor="#042e6f"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textSize="20dp"></TextView>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:padding="20dp"
+        >
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_height="200dp"
+            android:src="@drawable/paytm"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/Paytm"></ImageView>
+        <ImageView
+            android:layout_width="120dp"
+            android:layout_marginLeft="10dp"
+            android:layout_height="200dp"
+            android:src="@drawable/razorpay"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/Razorpay"></ImageView>
+    </LinearLayout>
+
+
+
+</LinearLayout>

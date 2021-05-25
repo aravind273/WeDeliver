@@ -2,10 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#ffffff"
+    android:background="@color/holo_gray_bright"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:background="@color/color_white"
@@ -27,7 +27,8 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="15dp"
+                android:textSize="25dp"
+                android:layout_marginTop="15dp"
                 android:textColor="@android:color/holo_blue_dark"
                 android:id="@+id/laundry_person_name"
                 android:text="Aravind">
@@ -37,12 +38,16 @@
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
                 android:textStyle="bold"
+                android:textColor="@color/black"
+
                 android:layout_marginTop="15dp"
-                android:text="Services:"/>
+                android:text="Services"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
+                android:textColor="@color/black"
+
                 android:layout_marginTop="5dp"
                 android:id="@+id/laundry_service"
 
@@ -53,12 +58,15 @@
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
                 android:textStyle="bold"
+                android:textColor="@color/black"
+
                 android:layout_marginTop="10dp"
-                android:text="Price:"/>
+                android:text="Price"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
+                android:textColor="@color/black"
                 android:id="@+id/laundry_price"
 
                 android:layout_marginTop="5dp"
@@ -69,14 +77,16 @@
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
                 android:textStyle="bold"
+                android:textColor="@color/black"
                 android:layout_marginTop="10dp"
-                android:text="Address:">
+                android:text="Address">
             </TextView>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
                 android:layout_marginTop="5dp"
+                android:textColor="@color/black"
                 android:id="@+id/laundry_address"
                 android:text="Address:">
             </TextView>
@@ -85,14 +95,16 @@
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
                 android:textStyle="bold"
+                android:textColor="@color/black"
                 android:layout_marginTop="10dp"
-                android:text="Contact Number:">
+                android:text="Contact Number">
             </TextView>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="15dp"
                 android:layout_marginTop="5dp"
+                android:textColor="@color/black"
                 android:id="@+id/laundry_number"
                 android:text="Contact Number:">
             </TextView>
@@ -103,22 +115,24 @@
                 android:orientation="horizontal"
                 android:layout_marginTop="10dp">
                 <com.airbnb.lottie.LottieAnimationView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    app:lottie_rawRes="@raw/call"
+                    android:layout_width="65dp"
+                    android:layout_height="90dp"
+                    app:lottie_rawRes="@raw/call2"
                     android:id="@+id/call"
                     app:lottie_autoPlay="true"
                     app:lottie_loop="true"
                     ></com.airbnb.lottie.LottieAnimationView>
                 <com.airbnb.lottie.LottieAnimationView
                     android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginLeft="20dp"
+                    android:layout_height="70dp"
                     app:lottie_rawRes="@raw/whatsapp1"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="10dp"
                     android:id="@+id/whatsapp"
                     app:lottie_autoPlay="true"
                     app:lottie_loop="true"
                     ></com.airbnb.lottie.LottieAnimationView>
+
             </LinearLayout>
         </LinearLayout>
 

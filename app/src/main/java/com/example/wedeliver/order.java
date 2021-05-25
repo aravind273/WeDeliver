@@ -56,40 +56,6 @@ public class order extends AppCompatActivity {
             firebaseAuth= FirebaseAuth.getInstance();
         String useremail=firebaseAuth.getCurrentUser().getEmail();
             String newemail=useremail.replace(".","");
-//        if(arrayListtemp!=null && arrayListtemp.size()>0)
-//        {
-//            String date= new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date()) ;
-//            String time=new SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(new Date());
-//
-//            databaseReference_order=FirebaseDatabase.getInstance().getReference().child("order").child(newemail).child(date+time);
-//            databaseReference_order.child("date").setValue(date);
-//            databaseReference_order.child("time").setValue(time);
-//            for(int i=0;i<arrayListtemp.size();i++)
-//            {
-//                cartItemDetails cartItemDetails=arrayListtemp.get(i);
-//                String name=cartItemDetails.getName();
-//                String brand=cartItemDetails.getBrand();
-//                String quantity=cartItemDetails.getQuantity();
-//                String selling_price=cartItemDetails.getSelling_price();
-//                String actual_price=cartItemDetails.getActual_price();
-//                String count=cartItemDetails.getCount();
-//                String image=cartItemDetails.getImage();
-//                String discount=cartItemDetails.getDicount();
-//                databaseReference_order.child(name).child("name").setValue(name);
-//                databaseReference_order.child(name).child("brand").setValue(brand);
-//                databaseReference_order.child(name).child("selling_price").setValue(selling_price);
-//                databaseReference_order.child(name).child("actual_price").setValue(actual_price);
-//                databaseReference_order.child(name).child("count").setValue(count);
-//                databaseReference_order.child(name).child("discount").setValue(discount);
-//                databaseReference_order.child(name).child("quantity").setValue(quantity);
-//            }
-//            databaseReference=FirebaseDatabase.getInstance().getReference().child("cart");
-//            databaseReference.removeValue();
-//            arrayListtemp.clear();
-//
-//        }
-
-
         DatabaseReference databaseReference_check=FirebaseDatabase.getInstance().getReference();
         databaseReference_check.addValueEventListener(new ValueEventListener() {
             @Override
@@ -119,6 +85,10 @@ public class order extends AppCompatActivity {
                                     else if (dataSnapshot1.getKey().equals("time"))
                                     {
                                         orderDetails.setTime(dataSnapshot1.getValue(String.class));
+                                    }
+                                    else if(dataSnapshot1.getKey().equals("payment_mode"))
+                                    {
+                                        orderDetails.setStatus(dataSnapshot1.getValue(String.class));
                                     }
                                     else
                                     {

@@ -68,13 +68,11 @@ import java.util.HashMap;
             toolbar.setTitleTextColor(getColor(R.color.color_white));
              setSupportActionBar(toolbar);
             recyclerView_grocery_items=findViewById(R.id.recyclerview_grocery);
+            recyclerView_grocery_items.setNestedScrollingEnabled(false);
             recyclerView_laundry=findViewById(R.id.recyclerview_laundry);
+            recyclerView_laundry.setNestedScrollingEnabled(false);
             recyclerView_rental=findViewById(R.id.recyclerview_rental);
-//            drawerLayout=findViewById(R.id.drawer_layout);
-//          ActionBarDrawerToggle toggle=new ActionBarDrawerToggle(MainActivity.this,drawerLayout,toolbar,R.string.navigation_drawer_open,R.string.navigation_drawer_close);
-//            drawerLayout.addDrawerListener(toggle);
-//            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-//            toggle.syncState();
+            recyclerView_rental.setNestedScrollingEnabled(false);
 
             firebaseAuth=FirebaseAuth.getInstance();
             ArrayList<SliderData> sliderDataArrayList = new ArrayList<>();
@@ -106,7 +104,7 @@ import java.util.HashMap;
                             startActivity(intent1);
                             break;
                         case R.id.myaccount:
-                            Intent intent2=new Intent(MainActivity.this,user_account_details.class);
+                            Intent intent2=new Intent(MainActivity.this,user_account_details_demo.class);
                             startActivity(intent2);
                             break;
 
@@ -302,6 +300,26 @@ import java.util.HashMap;
 
 
 
+        }
+
+        @Override
+        public boolean onCreateOptionsMenu(Menu menu) {
+            getMenuInflater().inflate(R.menu.menu,menu);
+            return true;
+        }
+
+        @Override
+        public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+            if(item.getItemId()==R.id.contactus)
+            {
+                    Intent intent=new Intent(getApplicationContext(),Contact.class);
+                    startActivity(intent);
+
+            }
+            else {
+                return super.onOptionsItemSelected(item);
+            }
+            return true;
         }
 
         @Override

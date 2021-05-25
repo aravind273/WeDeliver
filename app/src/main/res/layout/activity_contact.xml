@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Contact">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar_contact"
+        android:background="@drawable/toolbar"
+        app:titleTextColor="@color/color_white">
+    </androidx.appcompat.widget.Toolbar>
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        app:lottie_rawRes="@raw/customersupportwomen"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:id="@+id/lottie_animation"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/toolbar_contact"
+        ></com.airbnb.lottie.LottieAnimationView>
+
+    <EditText
+        android:layout_width="300dp"
+        android:minHeight="200dp"
+        android:layout_height="wrap_content"
+        android:gravity="start"
+        android:layout_marginTop="5dp"
+        android:id="@+id/message"
+        android:background="@color/holo_gray_bright"
+        android:layout_below="@+id/lottie_animation"
+        android:layout_centerHorizontal="true"
+        android:hint="Message..."
+        android:padding="10dp"></EditText>
+
+    <Button
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/button_background"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:id="@+id/submit_contact"
+        android:layout_marginTop="20dp"
+        android:text="submit"></Button>
+
+</RelativeLayout>

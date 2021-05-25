@@ -1,9 +1,14 @@
 package com.example.wedeliver;
 
+import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.net.Uri;
+import android.os.Parcelable;
 import android.os.storage.OnObbStateChangeListener;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -38,6 +43,10 @@ import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
+import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
+import static android.graphics.Color.GREEN;
+import static android.graphics.Color.RED;
+
 public class orderAdapter extends RecyclerView.Adapter<orderAdapter.Viewholder>
 {
 
@@ -61,6 +70,7 @@ public class orderAdapter extends RecyclerView.Adapter<orderAdapter.Viewholder>
         return new Viewholder(view);
     }
 
+    @SuppressLint("ResourceAsColor")
     @Override
     public void onBindViewHolder(@NonNull Viewholder holder, int position) {
         orderDetails orderDetails=orderDetailsArrayList.get(position);
@@ -69,11 +79,28 @@ public class orderAdapter extends RecyclerView.Adapter<orderAdapter.Viewholder>
         holder.time.setText(""+orderDetails.getTime());
         holder.payable.setText("₹"+orderDetails.getTotal_amount());
         holder.savings.setText("₹"+orderDetails.getSaved_amount());
-        holder.status.setText("cash on delivery");
+        holder.status.setText(""+orderDetails.getStatus());
         holder.orderDetails.setText(""+orderDetails.getOrder_Details());
+
+        if(orderDetails.getStatus().equals("paid through RazorPay"))
+        {
+                holder.pay.setText("PAID");
+                holder.pay.setTextColor(R.color.green);
+        }
         holder.pay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                if(holder.pay.getText().equals("PAID"))
+                {
+                    Toast.makeText(context,"Already paid",Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Intent intent = new Intent(context, payment.class);
+                    intent.putExtra("Amount", orderDetails.getTotal_amount());
+                    intent.putExtra("object", orderDetails);
+                    intent.setFlags(FLAG_ACTIVITY_NEW_TASK);
+                    context.startActivity(intent);
+                }
 
             }
         });
@@ -108,4 +135,11 @@ public class orderAdapter extends RecyclerView.Adapter<orderAdapter.Viewholder>
 
         }
     }
+
+
+
+
+
+
+
 }
