@@ -1,6 +1,8 @@
 package com.example.wedeliver;
 
-class orderDetails {
+import java.io.Serializable;
+
+class orderDetails implements Serializable {
     long orderId,total_amount,saved_amount;
     String order_Details,status,time,date;
     orderDetails()

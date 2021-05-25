@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="5dp"
+        android:outlineAmbientShadowColor="@color/black"
+        android:id="@+id/cardview"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description: "
+                android:textStyle="bold"
+                android:id="@+id/description"
+                android:textColor="@color/black"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/description"
+                android:id="@+id/problem"
+                android:text="App not working properly this is a request for all you the people "
+                android:textColor="@color/black"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Solution: "
+                android:layout_below="@+id/problem"
+                android:id="@+id/solution_textview"
+                android:textStyle="bold"
+                android:textColor="@color/black"></TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/problem"
+                android:layout_toRightOf="@+id/solution_textview"
+                android:id="@+id/solution"
+                android:text="App not working properly this is a request for all you the people "
+                android:textColor="@color/black"></TextView>
+            <View
+                android:layout_width="320dp"
+                android:layout_height="2dp"
+                android:background="@color/red"
+                android:layout_below="@+id/solution"
+                android:id="@+id/line"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp" />
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:text="Date: "
+                android:textStyle="bold"
+                android:layout_below="@+id/line"
+                android:id="@+id/date_textview"
+                android:layout_height="wrap_content"></TextView>
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:text="23/05/2021"
+                android:textStyle="bold"
+                android:id="@+id/date"
+                android:layout_toRightOf="@+id/date_textview"
+                android:layout_below="@+id/line"
+                android:layout_height="wrap_content"></TextView>
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:text="12:00:03"
+                android:textStyle="bold"
+                android:id="@+id/time"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/date"
+                android:layout_below="@+id/line"
+                android:layout_height="wrap_content"></TextView>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
