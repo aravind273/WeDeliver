@@ -1,5 +1,7 @@
 # WeDeliver
 WeDeliver is an android mobile friendly application which provides laundry,rental and grocery delivery services to customers and developed an separate application for admins to add grocery products, rental services and laundry services, admins can track orders and can view registered customers details.It is developed in Android Studio built with the help of  Java Programming language and used Firebase authentication,Firebase Real-time Database and Firebase Storage  to authenticate user,to provide real-time data updates and data access and to storage files in Firebase Storage.<br>
+
+Admins App :https://github.com/aravind273/Admin_App_of_WeDeliver 
 ### 1. App Logo.
 <img src="https://github.com/aravind273/WeDeliver/blob/master/screenshots/Screenshot_20210525_191227.jpg" alt="weDeliver Image" width="250" height="500"><br><br>
 ### 2. Splash screen.
